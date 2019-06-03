@@ -1,0 +1,7 @@
+{
+    "variants": 
+    {
+        "variant=homium": { "model": "homod:ore_nether_homium"},
+        "variant=ultrahomium": { "model": "homod:ore_nether_ultrahomium"}
+    }
+}

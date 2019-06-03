@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "HHH",
+        "HBH",
+        "HHH"
+    ],
+    
+    "key":
+    {
+        "H":
+        {
+            "item": "homod:homium"
+        },
+        "B":
+        {
+            "item": "minecraft:golden_carrot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "homod:homium_banana",
+        "count": 1
+    }
+}

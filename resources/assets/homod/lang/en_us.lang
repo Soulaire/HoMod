@@ -1,0 +1,65 @@
+//Tabs
+itemGroup.homodmaterials=HoMod Materials
+itemGroup.homodcombat=HoMod Combat
+itemGroup.homodtools=HoMod Tools
+itemGroup.homodblocks=HoMod Blocks
+
+
+//Blocks
+tile.ore_overworld_homium.name=Homium Ore
+tile.ore_overworld_ultrahomium.name=Ultra Homium Ore
+tile.ore_nether_homium.name=Ardent Homium Ore
+tile.ore_nether_ultrahomium.name=Ardent Ultra Homium Ore
+tile.homium_block.name=Block of Homium
+
+
+
+//Items
+item.homium_stick.name=Homium Stick
+item.homium.name=Homium
+
+
+
+//Tools
+item.homium_sword.name=Homium Sword
+item.homium_pickaxe.name=Homium Pickaxe
+item.homium_axe.name=Homium Axe
+item.homium_shovel.name=Homium Shovel
+item.homium_hoe.name=Homium Hoe
+
+
+
+//Armor
+item.homium_helmet.name=Homium Helmet
+item.homium_chestplate.name=Homium Chestplate
+item.homium_leggings.name=Homium Leggings
+item.homium_boots.name=Homium Boots
+
+
+
+//Food
+item.homium_banana.name=Homium Banana
+
+
+
+//Advancements
+advancements.colecting.root.title=You Feel It?
+advancements.colecting.root.description=Mine your first Homium Ore.
+
+advancements.colecting.homium.title=You definitely feel it
+advancements.colecting.homium.description=Smelt your first Homium.
+
+advancements.colecting.stick.title=A stick?
+advancements.colecting.stick.description=Craft a Homium stick
+
+advancements.colecting.htools.title=What a nice tools
+advancements.colecting.htools.description=Craft the whole set of Homium tools.
+
+advancements.colecting.banana.title=What could go wrong...
+advancements.colecting.banana.description=Craft a Homium Banana.
+
+advancements.colecting.bananaeat.title=So good and tasty
+advancements.colecting.bananaeat.description=Hmmmmmmmmmmmmmm, so good and tasty.
+
+advancements.colecting.hsword.title=Defend the Homium!
+advancements.colecting.hsword.description=Craft a Homium Sword

@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "homod:items/homium_pickaxe"
+    }
+ }

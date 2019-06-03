@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "homod:homium_block"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "homod:homium",
+        "count": 9
+    }
+}

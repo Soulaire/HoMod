@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "R R",
+        "R R"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "homod:homium"
+        }
+    },
+    
+    "result":
+    {
+        "item": "homod:homium_boots",
+        "count": 1
+    }
+}

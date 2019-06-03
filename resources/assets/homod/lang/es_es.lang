@@ -1,0 +1,65 @@
+//Tabs
+itemGroup.homodmaterials=HoMod Materials
+itemGroup.homodcombat=HoMod Combat
+itemGroup.homodtools=HoMod Tools
+itemGroup.homodblocks=HoMod Blocks
+
+
+//Blocks
+tile.ore_overworld_homium.name=Mena de Homium
+tile.ore_overworld_ultrahomium.name=Mena de Ultra Homium
+tile.ore_nether_homium.name=Mena de Homium Ardiente
+tile.ore_nether_ultrahomium.name=Mena de Ultra Homium Ardiente
+tile.homium_block.name=Bloque de Homium
+
+
+
+//Items
+item.homium.name=Homium
+item.homium_stick.name=Palo de Homium
+
+
+
+//Tools
+item.homium_sword.name=Espada de Homium
+item.homium_pickaxe.name=Pico de Homium
+item.homium_axe.name=Hacha de Homium
+item.homium_shovel.name=Pala de Homium
+item.homium_hoe.name=Azada de Homium
+
+
+
+//Armor
+item.homium_helmet.name=Casco de Homium
+item.homium_chestplate.name=Peto de Homium
+item.homium_leggings.name=Pantalones de Homium
+item.homium_boots.name=Botas de Homium
+
+
+
+//Food
+item.homium_banana.name=Banana de Homium
+
+
+
+//Advancements
+advancements.colecting.root.title=Sientes eso?
+advancements.colecting.root.description=Mina tu primera mena de Homium.
+
+advancements.colecting.homium.title=Definitivamente, lo sientes
+advancements.colecting.homium.description=Quema tu primera mena de Homium.
+
+advancements.colecting.stick.title=Un palo?
+advancements.colecting.stick.description=Craftea un palo de Homium.
+
+advancements.colecting.htools.title=Que bonitas herramientas
+advancements.colecting.htools.description=Craftea el set de herramientas de Homium.
+
+advancements.colecting.banana.title=Que podria salir mal...
+advancements.colecting.banana.description=Craftea una Banana de Homium.
+
+advancements.colecting.bananaeat.title=So good and tasty
+advancements.colecting.bananaeat.description=Hmmmmmmmmmmmmmm, so good and tasty.
+
+advancements.colecting.hsword.title=Defiende el Homium!
+advancements.colecting.hsword.description=Craftea una Espada de Homium.

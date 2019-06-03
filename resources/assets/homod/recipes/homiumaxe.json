@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "HH",
+        "HS",
+        " S"
+    ],
+    
+    "key":
+    {
+        "H":
+        {
+            "item": "homod:homium"
+        },
+        "S":
+        {
+            "item": "homod:homium_stick"
+        }
+    },
+    
+    "result":
+    {
+        "item": "homod:homium_axe",
+        "count": 1
+    }
+}
