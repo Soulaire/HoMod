@@ -1,0 +1,14 @@
+{
+    "variants":
+    {
+        "check_decay=true,decayable=true,variant=homium": { "model": "homod:leaves_homium" },
+        "check_decay=true,decayable=false,variant=homium": { "model": "homod:leaves_homium" },
+        "check_decay=false,decayable=true,variant=homium": { "model": "homod:leaves_homium" },
+        "check_decay=false,decayable=false,variant=homium": { "model": "homod:leaves_homium" },
+
+        "check_decay=true,decayable=true,variant=ultrahomium": { "model": "tutorial:aluminium_leaves" },
+        "check_decay=true,decayable=false,variant=ultrahomium": { "model": "tutorial:aluminium_leaves" },
+        "check_decay=false,decayable=true,variant=ultrahomium": { "model": "tutorial:aluminium_leaves" },
+        "check_decay=false,decayable=false,variant=ultrahomium": { "model": "tutorial:aluminium_leaves" }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/leaves",
+    "textures": {
+        "all": "homod:blocks/leaves_homium"
+    }
+ }

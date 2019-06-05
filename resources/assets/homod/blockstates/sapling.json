@@ -1,0 +1,10 @@
+{
+    "variants": 
+    {
+        "stage=0,variant=homium": { "model": "homod:sapling_homium"},
+        "stage=0,variant=ultrahomium": { "model": "homod:sapling_ultrahomium"},
+
+        "stage=1,variant=homium": { "model": "homod:sapling_homium"},
+        "stage=1,variant=ultrahomium": { "model": "homod:sapling_ultrahomium"}
+    }
+}

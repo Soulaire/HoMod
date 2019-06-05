@@ -1,0 +1,7 @@
+{
+    "variants": 
+    {
+        "variant=homium": { "model": "homod:planks_homium"},
+        "variant=ultrahomium": { "model": "homod:ore_overworld_ultrahomium"}
+    }
+}

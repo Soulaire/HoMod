@@ -1,0 +1,7 @@
+{
+    "parent": "block/column_side",
+    "textures": {
+        "end": "homod:blocks/homod_logtop",
+        "side": "homod:blocks/homod_logside"
+    }
+}

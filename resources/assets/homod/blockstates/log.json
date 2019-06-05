@@ -1,0 +1,15 @@
+{
+    "variants": 
+    {
+        "axis=y,variant=homium": { "model": "homod:log_homium"},
+        "axis=z,variant=homium": { "model": "homod:log_homiumside"},
+        "axis=x,variant=homium": { "model": "homod:log_homiumside", "y": 90 },
+        "axis=none,variant=homium": { "model": "homod:log_homiumbark"},
+
+        
+        "axis=x,variant=ultrahomium": { "model": "homod:log_ultrahomium"},
+        "axis=z,variant=ultrahomium": { "model": "homod:log_ultrahomium", "x": 90 },
+        "axis=y,variant=ultrahomium": { "model": "homod:log_ultrahomium", "x": 90, "y": 90 },
+        "axis=none,variant=ultrahomium": { "model": "homod:log_ultrahomium"}
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "homod:blocks/grass_top",
+        "side": "homod:blocks/grass_side"
+    }
+}
