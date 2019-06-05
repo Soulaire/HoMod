@@ -7,10 +7,12 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import soulaire.homod.init.BiomeInit;
 import soulaire.homod.init.BlockInit;
 import soulaire.homod.init.ItemInit;
 import soulaire.homod.util.interfaces.IHasModel;
 import soulaire.homod.world.gen.WorldGenCustomOres;
+import soulaire.homod.world.gen.WorldGenCustomTrees;
 
 @EventBusSubscriber
 public class RegistryHandler 
@@ -50,5 +52,8 @@ public class RegistryHandler
 	public static void otherRegistries()
 	{
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
+		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
+		
+		BiomeInit.registerBiomes();
 	}
 }
