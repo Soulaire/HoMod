@@ -52,7 +52,8 @@ public class BlockLeaf extends BlockLeaves implements IHasModel, IMetaName
 		setRegistryName(name);
 		setSoundType(SoundType.PLANT);
 		setCreativeTab(Main.homodblocks);
-		setDefaultState(this.blockState.getBaseState().withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
+		this.setLightOpacity(1);
+		setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, EnumHandler.EnumType.HOMIUM).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
 		
 		this.name = name;
 		
@@ -60,15 +61,13 @@ public class BlockLeaf extends BlockLeaves implements IHasModel, IMetaName
 		ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 	}
 	
-	
-
-
-	
+	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
 		return this.getDefaultState().withProperty(VARIANT, EnumHandler.EnumType.byMetadata(meta % 2));
 	}
 	
+	@Override
 	public int getMetaFromState(IBlockState state) 
 	{
 		int i = ((EnumHandler.EnumType)state.getValue(VARIANT)).getMeta();
@@ -144,12 +143,19 @@ public class BlockLeaf extends BlockLeaves implements IHasModel, IMetaName
 	}
 	
 
+	@SideOnly(Side.CLIENT)
+    public BlockRenderLayer getBlockLayer()
+    {
+        return BlockRenderLayer.TRANSLUCENT;
+    }
 	
 	@Override
-	public BlockRenderLayer getBlockLayer()
-	{
-		return BlockRenderLayer.TRANSLUCENT;
-	}
+    @SideOnly(Side.CLIENT)
+    public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
+    {
+        return true;
+    }
+
 	
 	@Override
 	public void registerModels() 

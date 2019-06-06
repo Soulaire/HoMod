@@ -14,6 +14,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import soulaire.homod.init.BlockInit;
 import soulaire.homod.world.biomes.BiomeDreamlands;
 import soulaire.homod.world.gen.generators.WorldGenHomiumTree;
@@ -35,8 +36,8 @@ public class WorldGenCustomTrees implements IWorldGenerator
 			
 		case 0:
 			
-			runGenerator(HOMIUM2, world, random, chunkX, chunkZ, 30, BlockInit.DREAM_GRASS, BiomeDreamlands.class);
-			runGenerator(HOMIUM, world, random, chunkX, chunkZ, 30, BlockInit.DREAM_GRASS, BiomeDreamlands.class);
+			//runGenerator(HOMIUM2, world, random, chunkX, chunkZ, 200, BlockInit.DREAM_GRASS, BiomeDreamlands.class);
+			runGenerator(HOMIUM, world, random, chunkX, chunkZ, 10, -1, 0, BiomeDreamlands.class);
 			
 			break;
 			
@@ -45,40 +46,27 @@ public class WorldGenCustomTrees implements IWorldGenerator
 		}
 	}
 	
-	private void runGenerator(WorldGenerator generator, World world, Random random, int chunkX, int chunkZ, int chance, Block topBlock, Class<?>... classes)
+	private void runGenerator(WorldGenerator generator, World world, Random random, int chunkX, int chunkZ, double chancesToSpawn, int minHeight, int maxHeight, Class<?>... classes)
 	{
-		ArrayList<Class<?>> classesList = new ArrayList<Class<?>>(Arrays.asList(classes));
-		
-		int x = (chunkX * 16) + random.nextInt(15);
-		int z = (chunkZ * 16) + random.nextInt(15);
-		int y = calculateGenerationHeight(world, x, z, topBlock);
-		BlockPos pos = new BlockPos(x,y,z);
-		
-		Class<?> biome = world.provider.getBiomeForCoords(pos).getClass();
-		
-		if(world.getWorldType() != WorldType.FLAT)
+		if(chancesToSpawn < 1)
 		{
-			if(classesList.contains(biome))
-			{
-				if(random.nextInt(chance) == 0)
-				{
-					generator.generate(world, random, pos);
-				}
-			}
+			if(random.nextDouble() < chancesToSpawn) chancesToSpawn = 1;
+			else chancesToSpawn = 0;
+		}
+		
+		ArrayList<Class<?>> classesList = new ArrayList<Class<?>>(Arrays.asList(classes));
+		int heightDiff = maxHeight - minHeight + 1;
+		for(int i = 0; i < chancesToSpawn; i++)
+		{
+			BlockPos pos = new BlockPos(chunkX * 16 + 10 + random.nextInt(15), minHeight + random.nextInt(heightDiff), chunkZ * 16 + 10 + random.nextInt(15));
+			if (minHeight < 0) pos = world.getHeight(pos);
+			Class<?> biome = world.provider.getBiomeForCoords(pos).getClass();
+			if(classesList.contains(biome) || classes.length == 0) generator.generate(world, random, pos);
 		}
 	}
 	
-	private static int calculateGenerationHeight(World world, int x, int z, Block topBlock)
+	public static void register()
 	{
-		int y = world.getHeight();
-		boolean foundGround = false;
-		
-		while(!foundGround && y-- >= 0)
-		{
-			Block block = world.getBlockState(new BlockPos(x,y,z)).getBlock();
-			foundGround = block == topBlock;
-		}
-		
-		return y;
+		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
 	}
 }

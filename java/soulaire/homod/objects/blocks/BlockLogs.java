@@ -15,6 +15,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.Rotation;
 import soulaire.homod.Main;
 import soulaire.homod.init.BlockInit;
 import soulaire.homod.init.ItemInit;
@@ -131,6 +132,28 @@ public class BlockLogs extends BlockLog implements IMetaName, IHasModel
 	{
 		return EnumHandler.EnumType.values()[stack.getItemDamage()].getName();
 	}
+	
+    public IBlockState withRotation(IBlockState state, Rotation rot)
+    {
+        switch (rot)
+        {
+            case COUNTERCLOCKWISE_90:
+            case CLOCKWISE_90:
+
+                switch ((BlockLog.EnumAxis)state.getValue(LOG_AXIS))
+                {
+                    case X:
+                        return state.withProperty(LOG_AXIS, BlockLog.EnumAxis.Z);
+                    case Z:
+                        return state.withProperty(LOG_AXIS, BlockLog.EnumAxis.X);
+                    default:
+                        return state;
+                }
+
+            default:
+                return state;
+        }
+    }
 	
 	@Override
 	public void registerModels() 

@@ -2,6 +2,7 @@ package soulaire.homod.world.biomes;
 
 import java.util.Random;
 
+import net.minecraft.entity.monster.EntityGolem;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.Biome;
@@ -17,13 +18,14 @@ public class BiomeDreamlands extends Biome
 	
 	public BiomeDreamlands() 
 	{
-		super(new BiomeProperties("Dream Lands").setBaseHeight(0.40F).setHeightVariation(0.25F).setTemperature(1.0F).setRainfall(0.2F).setWaterColor(16711935));
+		super(new BiomeProperties("Dream Lands").setBaseHeight(0.40F).setHeightVariation(0.25F).setTemperature(1.0F).setRainfall(0.2F).setWaterColor(16711755));
 		
 		topBlock = BlockInit.DREAM_GRASS.getDefaultState();
 		//fillerBlock = BlockInit.ORE_OVERWORLD.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.HOMIUM);
 		fillerBlock = Blocks.DIRT.getDefaultState();
 		
-		this.decorator.treesPerChunk = 10;
+		//this.decorator.treesPerChunk = 10;
+		this.decorator.treesPerChunk  = 200;
 		
 		this.spawnableCaveCreatureList.clear();
 		this.spawnableCreatureList.clear();
@@ -31,6 +33,7 @@ public class BiomeDreamlands extends Biome
 		this.spawnableWaterCreatureList.clear();
 		
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityVillager.class, 10, 1, 5));
+		this.spawnableCreatureList.add(new SpawnListEntry(EntityGolem.class, 10, 1, 2));
 	}
 	
 	@Override

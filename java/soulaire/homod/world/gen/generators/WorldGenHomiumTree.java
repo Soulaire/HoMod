@@ -25,7 +25,7 @@ public class WorldGenHomiumTree extends WorldGenAbstractTree
 	public WorldGenHomiumTree() 
 	{
 		super(false);
-		this.minHeight = 15;
+		this.minHeight = 7;
 	}
 
 	@Override
@@ -79,7 +79,7 @@ public class WorldGenHomiumTree extends WorldGenAbstractTree
 			{
 				state.getBlock().onPlantGrow(state, world, down, pos);
 				
-				for(int yPos = y - 3 + height; yPos <= y + height; yPos++)
+				for(int yPos = y - 5 + height; yPos <= y + height; yPos++)
 				{
 					int b1 = yPos - (y + height);
 					int b2 = 1 - b1 / 2;
@@ -96,9 +96,10 @@ public class WorldGenHomiumTree extends WorldGenAbstractTree
 								IBlockState treeState = world.getBlockState(treePos);
 								if(treeState.getBlock().isAir(treeState, world, treePos) || treeState.getBlock().isAir(treeState, world, treePos))
 								{
+									//Leaves
 									this.setBlockAndNotifyAdequately(world, treePos, LEAF);
-									this.setBlockAndNotifyAdequately(world, treePos.add(0, -0.25 * height, 0), LEAF);
-									this.setBlockAndNotifyAdequately(world, treePos.add(0, -0.5 * height, 0), LEAF);
+									//this.setBlockAndNotifyAdequately(world, treePos.add(0, -0.25 * height, 0), LEAF);
+									//this.setBlockAndNotifyAdequately(world, treePos.add(0, -0.5 * height, 0), LEAF);
 								}
 							}
 						}

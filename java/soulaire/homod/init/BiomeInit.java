@@ -16,7 +16,7 @@ public class BiomeInit
 	public static void registerBiomes()
 	{
 		//initBiome(DREAMLANDS, "Dream Lands", BiomeType.WARM, Type.HILLS, Type.MOUNTAIN, Type.DRY);
-		initBiome(DREAMLANDS, "Dream Lands", BiomeType.COOL, Type.PLAINS, Type.MAGICAL, Type.SPOOKY);
+		initBiome(DREAMLANDS, "Dream Lands", BiomeType.COOL, Type.FOREST, Type.MAGICAL, Type.SPOOKY);
 	}
 	
 	private static Biome initBiome(Biome biome, String name, BiomeType biomeType, Type... types)

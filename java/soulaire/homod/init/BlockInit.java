@@ -15,7 +15,7 @@ import soulaire.homod.objects.blocks.HomiumBlock;
 
 public class BlockInit 
 {
-	public static Block planks, leaves, log;
+	//public static Block planks, leaves, log;
 	
 	public static final List<Block> BLOCK = new ArrayList<Block>();
 	
