@@ -37,7 +37,7 @@ public class WorldGenCustomTrees implements IWorldGenerator
 		case 0:
 			
 			//runGenerator(HOMIUM2, world, random, chunkX, chunkZ, 200, BlockInit.DREAM_GRASS, BiomeDreamlands.class);
-			runGenerator(HOMIUM, world, random, chunkX, chunkZ, 10, -1, 0, BiomeDreamlands.class);
+			runGenerator(HOMIUM, world, random, chunkX, chunkZ, 4, -1, 0, BiomeDreamlands.class);
 			
 			break;
 			

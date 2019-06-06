@@ -25,7 +25,7 @@ public class WorldGenHomiumTree extends WorldGenAbstractTree
 	public WorldGenHomiumTree() 
 	{
 		super(false);
-		this.minHeight = 7;
+		this.minHeight = 9;
 	}
 
 	@Override
@@ -79,7 +79,7 @@ public class WorldGenHomiumTree extends WorldGenAbstractTree
 			{
 				state.getBlock().onPlantGrow(state, world, down, pos);
 				
-				for(int yPos = y - 5 + height; yPos <= y + height; yPos++)
+				for(int yPos = y - 3 + height; yPos <= y + height; yPos++)
 				{
 					int b1 = yPos - (y + height);
 					int b2 = 1 - b1 / 2;
