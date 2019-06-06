@@ -12,6 +12,14 @@ tile.ore_nether_homium.name=Ardent Homium Ore
 tile.ore_nether_ultrahomium.name=Ardent Ultra Homium Ore
 tile.homium_block.name=Block of Homium
 
+//Tree
+tile.planks_homium.name=Homium Planks
+tile.log_homium.name=Homium Log
+tile.saplings.name=Homium Sapling
+tile.leaves.name=Homium Leaves
+
+//Biome
+tile.dream_grass.name=Dream Grass
 
 
 //Items

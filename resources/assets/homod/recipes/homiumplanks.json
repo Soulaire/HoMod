@@ -3,7 +3,6 @@
   
   "pattern":
   [
-      "H",
       "H"
   ],
   
@@ -11,13 +10,13 @@
   {
       "H":
       {
-          "item": "homod:planks"
+          "item": "homod:log_homium"
       }
   },
   
   "result":
   {
-      "item": "homod:homium_stick",
+      "item": "homod:planks",
       "count": 4
   }
 }
